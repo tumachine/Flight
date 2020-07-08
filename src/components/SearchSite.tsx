@@ -12,10 +12,10 @@ interface Option {
 }
 
 const options: Option[] = [
-  { name: 'по убыванию цены', operation: (cards) => SortByPrice(cards, true) }, 
-  { name: 'по возрастанию цены', operation: (cards) => SortByPrice(cards, false) },
-  { name: 'по уменьшению времени в пути', operation: (cards) => SortByDuration(cards, true) }, 
-  { name: 'по возрастанию времени в пути', operation: (cards) => SortByDuration(cards, false) },
+  { name: 'по убыванию цены', operation: (cards) => SortByPrice(cards, false) }, 
+  { name: 'по возрастанию цены', operation: (cards) => SortByPrice(cards, true) },
+  { name: 'по уменьшению времени в пути', operation: (cards) => SortByDuration(cards, false) }, 
+  { name: 'по возрастанию времени в пути', operation: (cards) => SortByDuration(cards, true) },
 ]
 
 interface Checkbox {
@@ -26,9 +26,9 @@ interface Checkbox {
 
 const checkboxes: Checkbox[] = [
   { name: 'без пересадок', operation: (cards) => FilterByTransferAmount(cards, 1), checked: false}, 
-  { name: '2 пересадки', operation: (cards) => FilterByTransferAmount(cards, 2), checked: false },
-  { name: '3 пересадки', operation: (cards) => FilterByTransferAmount(cards, 3), checked: false }, 
-  { name: '4 пересадки', operation: (cards) => FilterByTransferAmount(cards, 4), checked: false },
+  { name: 'одна пересадка', operation: (cards) => FilterByTransferAmount(cards, 2), checked: false },
+  { name: 'две пересадки', operation: (cards) => FilterByTransferAmount(cards, 3), checked: false }, 
+  { name: 'три пересадки', operation: (cards) => FilterByTransferAmount(cards, 4), checked: false },
 ]
 
 interface SearchRange {
@@ -44,7 +44,7 @@ interface SearchInput {
 
 const SearchSite = (props: Props) => {
   const [searchPriceFrom, setSearchPriceFrom] = useState("0");
-  const [searchPriceTo, setSearchPriceTo] = useState("20000");
+  const [searchPriceTo, setSearchPriceTo] = useState("60000");
   const [searchPriceCorrect, setSearchPriceCorrect] = useState(true);
 
   const [flights, setFlights] = useState(getFlights())

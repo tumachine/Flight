@@ -98,4 +98,5 @@ const FilterByCost = (cards: FlightCardInfo[], from: number, to: number) => {
   return cards.filter(f => f.price >= from && f.price <= to);
 }
 
+
 export { getFlights, FlightCardInfo, SortByPrice, SortByDuration, FilterByTransferAmount, FilterByCost };
