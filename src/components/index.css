@@ -1,0 +1,164 @@
+.container {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Sans Pro', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --clr-light: #fff;
+    --clr-dark: #555555;
+    --clr-highlight: #949494;
+}
+
+/* ------------------- Controls ---------------- */
+.controls {
+    margin: 50px;
+    border: 2px solid black;
+    padding: 20px;
+    vertical-align: center;
+}
+
+.controls__title {
+    font-size: 1.1em;
+    font-weight: bold; 
+}
+
+.controls__sort {
+    display: flex;
+    flex-direction: column;
+}
+
+.controls__sorttransfer {
+    display: flex;
+    flex-direction: column;
+}
+.controls__searchprice {
+    display: flex;
+    flex-direction: column;
+}
+
+.controls__searchprice--incorrect {
+    background-color: red;    
+}
+
+/* -------------------- Flights ------------------- */
+
+.flights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* -------------------- Card ------------------- */
+.card {
+    height: 220px;
+    width: 660px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* Card Price */ 
+.card__price {
+    text-align: right;
+    background-color: #425668;
+    display: flex;
+    flex-direction: column;
+    color: #d1d4d0;
+    height: 20%;
+    padding: 2px 10px;
+}
+
+.card__price__cost {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card__price__description {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+
+/* Card Locations */ 
+.card__locations {
+    margin: 0 10px;
+    font-size: 17px;
+    border-bottom: 1px solid #425668;
+    height: 20%;
+    max-height: 20%;
+}
+
+.card__locations p {
+    display: inline-block;
+    height: 2em;
+}
+
+.card__locations--code {
+    color: #425668;
+}
+
+
+.card__duration {
+   display: flex; 
+   justify-content: space-between;
+   margin: 0 15px;
+   height: 20%;
+}
+
+.card__duration__from {
+   font-size: 20px; 
+}
+
+.card__duration__total {
+    display: flex;
+    align-items: center;
+}
+
+.card__duration__total__image {
+    width: 20px;
+}
+
+
+.card__duration__to {
+   font-size: 20px; 
+}
+
+.card__duration--date {
+    color: #425668;
+    font-size: 16px;
+}
+
+.card__carrier {
+    margin: 0 20px;
+    height: 20%;
+}
+
+.card__select {
+    height: 20%;
+}
+
+.card__select__button {
+    width: 100%;
+    background-color: red;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    border-width: 0;
+    height: 100%;
+}
